@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nina — The Bakery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ─── NAV ─── -->
+    <nav class="nav" id="navbar">
+        <div class="nav__logo">
+            <img src="images/logo.png" alt="Nina Logo" class="nav__logo-img" />
+            <span class="nav__logo-text"><span class="nav__logo-n">N</span>ina</span>
+        </div>
+        <ul class="nav__links">
+            <li><a href="#story">Our Story</a></li>
+            <li><a href="#order">Order</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#order" class="btn btn--nav">Order Now</a>
+        <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    </nav>
+    <div class="nav__mobile" id="mobileMenu">
+        <ul>
+            <li><a href="#story" onclick="closeMobile()">Our Story</a></li>
+            <li><a href="#order" onclick="closeMobile()">Order</a></li>
+            <li><a href="#contact" onclick="closeMobile()">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- ─── HERO ─── -->
+    <header class="hero" id="home">
+        <!-- Split background panels -->
+        <div class="hero__bg-left"></div>
+        <div class="hero__bg-right"></div>
+        <!-- Dot grid overlay -->
+        <div class="hero__dots"></div>
+
+        <div class="hero__content">
+            <p class="hero__eyebrow">Handcrafted with love ✦</p>
+            <h1 class="hero__title">
+                <em class="hero__underline">Baked</em> to<br/>perfection,<br/>just for <em class="hero__underline">you.</em>
+            </h1>
+            <p class="hero__sub">Artisanal pastries, cakes &amp; breads — made fresh every morning in our little kitchen.</p>
+            <div class="hero__actions">
+                <a href="#order" class="btn btn--primary">Order Now</a>
+                <a href="#story" class="btn btn--ghost">Our Story ↓</a>
+            </div>
+            <!-- Social proof -->
+            <div class="hero__proof">
+                <div class="hero__proof-stars">★★★★★</div>
+                <p><strong>500+</strong> happy customers love Nina</p>
+            </div>
+        </div>
+
+        <div class="hero__visual">
+            <div class="hero__photo-wrap">
+                <!-- Glow aura -->
+                <div class="hero__glow"></div>
+                <div class="hero__photo-ring hero__photo-ring--outer"></div>
+                <div class="hero__photo-ring hero__photo-ring--inner"></div>
+                <img src="images/cookie-plate.png" alt="72hr Chocolate Chunk Cookie on a plate" class="hero__cookie-img" />
+                <!-- Product label -->
+                <div class="hero__photo-tag">
+                    <span></span>
+                    <div>
+                        <strong>72hr Cookie</strong>
+                        <small>Chocolate Chunk</small>
+                    </div>
+                </div>
+                <!-- Fresh sticker -->
+                <div class="hero__fresh-sticker">Fresh today</div>
+                <!-- Floating pastry emojis -->
+                <span class="f-emoji f1">🥐</span>
+                <span class="f-emoji f2">🧁</span>
+                <span class="f-emoji f3">🍩</span>
+                <span class="f-emoji f4">🍰</span>
+                <span class="f-emoji f5">🎂</span>
+                <span class="f-emoji f6">🍪</span>
+
+            </div>
+        </div>
+
+        <!-- Rotating badge -->
+        <div class="hero__badge">
+            <svg viewBox="0 0 120 120" class="badge-svg"><path id="circle-text" d="M 60,60 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"/><text font-size="11.5" fill="#2563eb" letter-spacing="3"><textPath href="#circle-text">NINA THE BAKERY • FRESH DAILY • BAKED WITH LOVE •</textPath></text></svg>
+            <span class="badge-icon">🥐</span>
+        </div>
+
+        <div class="hero__scroll">
+            <span></span>scroll
+        </div>
+    </header>
+
+    <!-- ─── MARQUEE ─── -->
+    <div class="marquee-wrap">
+        <div class="marquee-track">
+            <span>Croissants ✦ Sourdough ✦ Custom Cakes ✦ Cookies ✦ Tarts ✦ Brownies ✦ Macarons ✦ Brioche ✦ </span>
+            <span aria-hidden="true">Croissants ✦ Sourdough ✦ Custom Cakes ✦ Cookies ✦ Tarts ✦ Brownies ✦ Macarons ✦ Brioche ✦ </span>
+        </div>
+    </div>
+
+    <!-- ─── COOKIE FEATURE BANNER ─── -->
+    <section class="cookie-banner">
+        <div class="cookie-banner__img-wrap">
+            <img src="images/cookie-hero.png" alt="72hr Chocolate Chunk Cookie – Nina the Bakery" class="cookie-banner__img" />
+            <div class="cookie-banner__overlay">
+                <div class="cookie-banner__text">
+                    <p class="cookie-banner__eyebrow">★ Fan Favourite</p>
+                    <h2 class="cookie-banner__title">72hr Chocolate<br/>Chunk Cookie</h2>
+                    <p class="cookie-banner__desc">Cold-fermented for 72 hours for a richer, deeper flavour. Crisp edges, gooey centre — every single time.</p>
+                    <a href="#order" class="btn btn--white">Order Yours →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── STORY ─── -->
+    <section class="story" id="story">
+        <div class="container story__grid">
+            <div class="story__visual">
+                <div class="story__img-frame">
+                    <div class="story__img-block story__img-block--1">
+                        <span class="big-emoji">🧁</span>
+                        <p class="img-caption">Made fresh daily</p>
+                    </div>
+                    <div class="story__img-block story__img-block--2">
+                        <span class="big-emoji">🫶</span>
+                        <p class="img-caption">Baked with love</p>
+                    </div>
+                    <div class="story__ribbon">Est. 2020</div>
+                </div>
+            </div>
+            <div class="story__text">
+                <p class="section-eyebrow">✦ Our Story</p>
+                <h2 class="section-title">A little kitchen,<br/><em>a lot of love.</em></h2>
+                <p>Nina started as a small dream — a home kitchen, a worn-out apron, and an obsession with getting the perfect croissant lamination. What began as weekend baking for friends and family grew into something far sweeter.</p>
+                <p>Every item that leaves our kitchen is made by hand, using locally-sourced ingredients and time-tested recipes passed down through generations — with a modern twist that keeps you coming back.</p>
+                <div class="story__stats">
+                    <div class="stat">
+                        <span class="stat__num">78+</span>
+                        <span class="stat__label">Posts & Recipes</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__num">404</span>
+                        <span class="stat__label">Happy Followers</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__num">∞</span>
+                        <span class="stat__label">Good Mornings</span>
+                    </div>
+                </div>
+                <a href="#order" class="btn btn--primary">Order Your Box</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ─── WHY US ─── -->
+    <section class="why">
+        <div class="container">
+            <p class="section-eyebrow center">✦ Why Nina</p>
+            <h2 class="section-title center">The difference is in<br/><em>the details.</em></h2>
+            <div class="why__grid">
+                <div class="why-card">
+                    <div class="why-card__icon">🌾</div>
+                    <h3>Local Ingredients</h3>
+                    <p>We source flour, eggs, and dairy from local farms — fresher ingredients, better flavour.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card__icon">⏰</div>
+                    <h3>Baked Fresh Daily</h3>
+                    <p>Nothing sits overnight. Everything you order is baked that very morning.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card__icon">🎨</div>
+                    <h3>Custom Creations</h3>
+                    <p>Got a vision? We'll turn it into a cake. Every custom order is a collaboration.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card__icon">📦</div>
+                    <h3>Beautiful Packaging</h3>
+                    <p>Every box is wrapped as a gift — because receiving something beautiful matters.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ─── TESTIMONIALS ─── -->
+    <section class="testimonials">
+        <div class="container">
+            <p class="section-eyebrow center">✦ Love Notes</p>
+            <h2 class="section-title center">What people<br/><em>are saying.</em></h2>
+            <div class="testi__grid">
+                <div class="testi-card">
+                    <div class="testi-stars">★★★★★</div>
+                    <p>"The croissants were honestly the best I've ever had outside of Paris. Flaky, buttery, perfect. Nina is a gem."</p>
+                    <div class="testi-author">
+                        <span class="testi-avatar">S</span>
+                        <div><strong>Sophia R.</strong><small>Regular customer</small></div>
+                    </div>
+                </div>
+                <div class="testi-card testi-card--featured">
+                    <div class="testi-stars">★★★★★</div>
+                    <p>"Ordered a custom birthday cake for my daughter — Nina absolutely nailed the design and the flavour. Everyone kept asking where it was from!"</p>
+                    <div class="testi-author">
+                        <span class="testi-avatar">M</span>
+                        <div><strong>Meera P.</strong><small>Custom cake order</small></div>
+                    </div>
+                </div>
+                <div class="testi-card">
+                    <div class="testi-stars">★★★★★</div>
+                    <p>"The sourdough loaf is my Saturday ritual now. I pick it up every week. Perfectly sour, perfect crust. Can't imagine my weekend without it."</p>
+                    <div class="testi-author">
+                        <span class="testi-avatar">J</span>
+                        <div><strong>James K.</strong><small>Weekly bread subscriber</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── ORDER ─── -->
+    <section class="order" id="order">
+        <div class="container order__inner">
+            <div class="order__text">
+                <p class="section-eyebrow">✦ Place an Order</p>
+                <h2 class="section-title">Ready to<br/><em>treat yourself?</em></h2>
+                <p>Fill in the form and we'll get back to you within a few hours to confirm your order and arrange pickup or delivery.</p>
+                <div class="order__info">
+                    <div class="order-info-item">
+                        <span>📍</span> Pickup available daily · 8am–6pm
+                    </div>
+                    <div class="order-info-item">
+                        <span>🚗</span> Local delivery within 10km
+                    </div>
+                    <div class="order-info-item">
+                        <span>📅</span> Custom cakes need 48hr notice
+                    </div>
+                </div>
+            </div>
+            <form class="order__form" id="orderForm" onsubmit="handleSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" placeholder="Jane Doe" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone / WhatsApp</label>
+                        <input type="tel" id="phone" placeholder="+1 234 567 8900" required/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="jane@example.com" required/>
+                </div>
+                <div class="form-group">
+                    <label for="items">What would you like to order?</label>
+                    <textarea id="items" rows="3" placeholder="2x Butter Croissant, 1x Custom Birthday Cake (vanilla, 2 tiers)…" required></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Pickup / Delivery Date</label>
+                        <input type="date" id="date" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="type">Order Type</label>
+                        <select id="type">
+              <option>Pickup</option>
+              <option>Local Delivery</option>
+            </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="notes">Any special notes?</label>
+                    <textarea id="notes" rows="2" placeholder="Allergies, decorating notes, surprise deliveries…"></textarea>
+                </div>
+                <button type="submit" class="btn btn--primary btn--full">Send Order Request 🥐</button>
+                <div class="form-success" id="formSuccess">
+                    🎉 Thank you! We'll be in touch soon.
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- ─── CONTACT ─── -->
+    <section class="contact" id="contact">
+        <div class="container contact__grid">
+            <div>
+                <p class="section-eyebrow">✦ Find Us</p>
+                <h2 class="section-title">Come say<br/><em>hello.</em></h2>
+                <div class="contact__details">
+                    <div class="contact-row">
+                        <span>📍</span>
+                        <div><strong>Location</strong>
+                            <p>Available for pickup & local delivery — DM us on Instagram for exact address.</p>
+                        </div>
+                    </div>
+                    <div class="contact-row">
+                        <span>📸</span>
+                        <div><strong>Instagram</strong>
+                            <p><a href="https://www.instagram.com/ninathebakery/" target="_blank">@ninathebakery</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-row">
+                        <span>⏰</span>
+                        <div><strong>Hours</strong>
+                            <p>Mon–Sat: 8am – 6pm<br/>Sunday: 9am – 2pm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact__map">
+                <div class="map-placeholder">
+                    <span>🗺️</span>
+                    <p>DM us on Instagram<br/>for our exact location</p>
+                    <a href="https://www.instagram.com/ninathebakery/" target="_blank" class="btn btn--sm">@ninathebakery</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── FOOTER ─── -->
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__brand">
+                <div class="footer__logo">
+                    <img src="images/logo.png" alt="Nina Logo" class="footer__logo-img" />
+                    <span><span>N</span>ina</span>
+                </div>
+                <p>Handcrafted pastries &amp; cakes,<br/>baked fresh every morning.</p>
+                <div class="footer__socials">
+                    <a href="https://www.instagram.com/ninathebakery/" target="_blank" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="20"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#story">Our Story</a></li>
+                    <li><a href="#order">Place an Order</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer__links">
+                <h4>Specialities</h4>
+                <ul>
+                    <li><a href="#order">Custom Cakes</a></li>
+                    <li><a href="#order">Croissants</a></li>
+                    <li><a href="#order">Sourdough</a></li>
+                    <li><a href="#order">Seasonal Tarts</a></li>
+                    <li><a href="#order">Gift Boxes</a></li>
+                </ul>
+            </div>
+            <div class="footer__newsletter">
+                <h4>Stay in the loop</h4>
+                <p>Get notified about seasonal specials & new menu drops.</p>
+                <form class="newsletter-form" onsubmit="nlSubmit(event)">
+                    <input type="email" placeholder="your@email.com" required/>
+                    <button type="submit" class="btn btn--sm">Subscribe</button>
+                </form>
+                <div class="nl-success" id="nlSuccess">✓ You're in!</div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2024 Nina the Bakery. Made with 🧡 & a lot of butter.</p>
+        </div>
+    </footer>
+
+    <!-- ─── BACK TO TOP ─── -->
+    <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
